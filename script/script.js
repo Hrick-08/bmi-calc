@@ -33,3 +33,4 @@ setInterval(nextSlide, 5000);
 // Add event listeners for navigation buttons
 nextButton.addEventListener('click', nextSlide);
 prevButton.addEventListener('click', prevSlide);
+

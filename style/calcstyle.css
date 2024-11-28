@@ -234,3 +234,26 @@ input:focus {
         border-bottom: 1px solid #e9ecef;
     }
 }
+
+.back-home-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-home-btn:hover {
+    background: linear-gradient(135deg, #5762d5 0%, #653d8c 100%);
+    transform: translateY(-2px);
+}
+
+.back-home-btn:active {
+    background: linear-gradient(135deg, #4a54c2 0%, #5a3479 100%);
+    transform: translateY(1px);
+}
