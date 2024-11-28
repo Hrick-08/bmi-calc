@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/contactus.css">
+    <title>Fit Check</title>
+    <link rel="icon" href="/Image/fitchecklogo.png">
+</head>
+
+<body>
+    <div class="contact-us">
+        <h2>Contact Us</h2>
+        <p>Any question or remarks? Just write us a message!</p>
+    </div>
+
+    <!-- Redesigned Layout: Map on Left, Contact Form on Right -->
+    <div class="contact-container">
+        <!-- Left Side: Google Map -->
+        <div class="map-container">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3437.17513520983!2d76.65720287536412!3d30.516086474689473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fc32344a6e2d7%3A0x81b346dee91799ca!2sChitkara%20University!5e0!3m2!1sen!2sin!4v1732307348275!5m2!1sen!2sin" 
+                width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+        </div>
+
+        <!-- Right Side: Contact Form -->
+        <div class="form-container">
+            <h2>Get in Touch</h2>
+            <form id="contactForm">
+                <div class="form-group">
+                    <input type="text" placeholder="First Name" required>
+                    <input type="text" placeholder="Last Name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" placeholder="Email" required>
+                    <input type="tel" placeholder="Phone Number" required>
+                </div>
+                <div class="form-group">
+                    <select>
+                        <option value="">Select Subject</option>
+                        <option value="general">General Inquiry</option>
+                        <option value="billing">Bmi Not Calculated</option>
+                        <option value="support">Support</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <textarea placeholder="Write your message..." required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+            <p id="thankYouMessage" style="display:none; color: green; margin-top: 10px;">Thank you for your response!</p>
+            
+        </div>
+    </div>
+
+    <!-- Home Button Section -->
+    <div class="home-button-container">
+        <a href="index.html" class="home-button">Home</a>
+    </div>
+
+    <footer>
+        © 2024 Fit Check. All rights reserved.
+    </footer>
+    <script>
+        document.getElementById("contactForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+            document.getElementById("thankYouMessage").style.display = "block"; // Show thank you message
+        });
+    </script>
+    
+
+</body>
+
+</html>

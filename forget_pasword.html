@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/forget.css">
+    <title>Forgot Password</title>
+    <link rel="icon" href="./Image/fitchecklogo.png">
+</head>
+
+<body>
+    <header>
+        <div class="headtext">
+            <h1>FitCheck</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="page">
+            <div class="loginimg">
+                <img src="./Image/fitchecklogo.png" alt="FitCheck Logo">
+            </div>
+            <section class="signup">
+                <div class="signup-form">
+                    <h1>Forgot Password</h1>
+                    <p>Enter your registered email to reset your password</p>
+                    <form id="forgetForm">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your registered email" required>
+
+                        <label for="newPassword">New Password</label>
+                        <input type="password" id="newPassword" name="newPassword" placeholder="Enter new password" required>
+
+                        <button type="submit" class="btn-primary">Reset Password</button>
+                    </form>
+                    <div class="separator">OR</div>
+                    <a href="./login.html" class="home-button">Back to Login</a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 FitCheck. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const forgetForm = document.getElementById('forgetForm');
+    
+        forgetForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const email = document.getElementById('email').value;
+            const newPassword = document.getElementById('newPassword').value;
+    
+            // Retrieve existing accounts from localStorage
+            let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    
+            // Find the account
+            const accountIndex = accounts.findIndex(acc => acc.email === email);
+    
+            if (accountIndex !== -1) {
+                // Validate password length
+                if (newPassword.length < 8) {
+                    alert('Password too short! Please enter at least 8 characters.');
+                    return;
+                }
+    
+                // Update the password
+                accounts[accountIndex].password = newPassword;
+                localStorage.setItem('accounts', JSON.stringify(accounts));
+    
+                alert('Password reset successful. Please log in with your new password.');
+                window.location.href = './login.html';
+            } else {
+                alert('No account found with the provided email.');
+            }
+        });
+    </script>
+    
+    
+</body>
+
+</html>

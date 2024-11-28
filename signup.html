@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/signup.css">
+    <title>Sign Up - FitCheck</title>
+    <link rel="icon" href="./Image/fitchecklogo.png">
+</head>
+
+<body>
+    <header>
+        <div class="headtext">
+            <h1>FitCheck</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="page">
+            <div class="loginimg">
+                <img src="./Image/fitchecklogo.png" alt="FitCheck Logo">
+            </div>
+            <section class="signup">
+                <div class="signup-form">
+                    <h1>Create an Account</h1>
+                    <a href="./index.html">Already have an account? Log in</a>
+                    <form id="signupForm">
+                        <label for="firstname">First Name</label>
+                        <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+
+                        <label for="lastname">Last Name</label>
+                        <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+
+                        <button type="submit" class="btn-primary">Create an Account</button>
+                    </form>
+                    <div class="separator">OR</div>
+                    <button class="google-btn">
+                        <img src="./Image/google-icon-logo-svgrepo-com.svg" alt="Google logo">
+                        Continue with Google
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="home-button-container">
+        <a href="./index.html" class="home-button">Back to Home</a>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 FitCheck. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const signupForm = document.getElementById('signupForm');
+    
+        signupForm.addEventListener('submit', function (event) {
+            event.preventDefault();
+    
+            const firstName = document.getElementById('firstname').value;
+            const lastName = document.getElementById('lastname').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+    
+            // Validate password length
+            if (password.length < 8) {
+                alert('Password too short! Please enter at least 8 characters.');
+                return;
+            }
+    
+            // Retrieve existing accounts from localStorage
+            let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+    
+            // Check if the email is already registered
+            if (accounts.some(account => account.email === email)) {
+                alert('An account with this email already exists. Please log in.');
+                return;
+            }
+    
+            // Add the new account
+            accounts.push({ firstName, lastName, email, password });
+            localStorage.setItem('accounts', JSON.stringify(accounts));
+    
+            alert('Your account has been created!');
+            window.location.href = './login.html';
+        });
+    </script>
+    
+    
+    
+</body>
+
+</html>

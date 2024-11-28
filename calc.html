@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitCheck BMI Calculator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/calcstyle.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="header">
+            <div class="logo">
+                <img src="./Image/fitchecklogo.png" alt="FitCheck Logo">
+            </div>
+            <h1>BMI Calculator by FitCheck</h1>
+        </div>
+        <div class="calculator-content">
+            <div class="input-section">
+                <div class="gender-select">
+                    <div class="gender-container">
+                        <div class="gender-option female" onclick="selectGender('female')">♀</div>
+                        <div class="gender-label">Female</div>
+                    </div>
+                    <div class="gender-container">
+                        <div class="gender-option male" onclick="selectGender('male')">♂</div>
+                        <div class="gender-label">Male</div>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-wrapper">
+                        <label for="weight" class="input-label">Enter your weight</label>
+                        <input type="number" id="weight" placeholder="Weight (kg)">
+                    </div>
+                    <div class="input-wrapper">
+                        <label for="height" class="input-label">Enter your height</label>
+                        <input type="number" id="height" placeholder="Height (cm)">
+                    </div>
+                </div>
+                <button class="calculate-btn" onclick="calculateBMI()">Calculate BMI</button>
+            </div>
+            <div class="output-section">
+                <div id="bmi-value">0.00</div>
+                <div id="bmi-status">Enter Details</div>
+                <div class="bmi-meter">
+                    <div id="bmi-meter-pointer" class="bmi-meter-pointer"></div>
+                </div>
+                <div id="bmi-details"></div>
+                <div id="motivation-quote"></div>
+                <a href="#" id="info-link" class="info-link" target="_blank">Learn More</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="./script/calcscript.js"></script>
+</body>
+</html>
