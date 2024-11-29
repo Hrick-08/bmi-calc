@@ -192,23 +192,15 @@ footer {
 }
 
 /* Media Queries */
-@media screen and (max-width: 768px) {
-    .page {
-        flex-direction: column;
+@media screen and (max-width: 480px) {
+    .form-container {
+        width: 90%; /* Reduce width to leave space on sides */
+        margin: 0 auto; /* Center the form horizontally */
         padding: 20px;
+        box-shadow: none;
     }
 
-    .loginimg img {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .signup-form {
-        width: 100%;
-    }
-
-    .home-button {
-        font-size: 0.9rem;
-        padding: 8px 15px;
+    .contact-container {
+        align-items: center; /* Center items vertically if needed */
     }
 }
