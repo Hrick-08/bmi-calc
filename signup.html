@@ -67,27 +67,25 @@ signupForm.addEventListener('submit', function (event) {
 
     const firstName = document.getElementById('firstname').value.trim();
     const lastName = document.getElementById('lastname').value.trim();
-    const email = document.getElementById('email').value.trim().toLowerCase(); // Normalize email
-    const password = document.getElementById('password').value;
+    const email = document.getElementById('email').value.trim().toLowerCase();
+    const password = document.getElementById('password').value.trim();
 
-    // Validate password length
     if (password.length < 8) {
         alert('Password too short! Please enter at least 8 characters.');
         return;
     }
 
-    // Retrieve existing accounts from localStorage
     let accounts = JSON.parse(localStorage.getItem('accounts')) || [];
 
-    // Check if the email is already registered
     if (accounts.some(account => account.email === email)) {
         alert('An account with this email already exists. Please log in.');
         return;
     }
 
-    // Add the new account
     accounts.push({ firstName, lastName, email, password });
     localStorage.setItem('accounts', JSON.stringify(accounts));
+
+    console.log("Stored Accounts:", accounts);
 
     alert('Your account has been created!');
     window.location.href = './login.html';
