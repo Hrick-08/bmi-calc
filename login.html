@@ -50,27 +50,27 @@
         <p>&copy; FitCheck. All Rights Reserved</p>
     </footer>
     <script>
-        const loginForm = document.getElementById('login-form');
-    
-        loginForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-    
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-    
-            // Retrieve existing accounts from localStorage
-            const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
-    
-            // Validate credentials
-            const account = accounts.find(acc => acc.email === email && acc.password === password);
-    
-            if (account) {
-                alert(`Welcome back, ${account.firstName}!`);
-                window.location.href = './calc.html';
-            } else {
-                alert('Invalid credentials. Please try again.');
-            }
-        });
+        
+   loginForm.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+
+    // Retrieve existing accounts from localStorage
+    const accounts = JSON.parse(localStorage.getItem('accounts')) || [];
+
+    // Validate credentials
+    const account = accounts.find(acc => acc.email === email && acc.password === password);
+
+    if (account) {
+        alert(`Welcome back, ${account.firstName}!`);
+        window.location.href = './calc.html'; // Redirect on successful login
+    } else {
+        alert('Invalid credentials. Please try again.');
+    }
+});
+
     </script>
     
     
