@@ -6,56 +6,82 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FitCheck</title>
     <!-- Bootstrap CSS -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="./style/style.css">
+ <!-- Font Awesome (for icons, optional) -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+<!-- Bootstrap CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Custom CSS -->
+<link rel="stylesheet" href="./style/style.css">
+
+<!-- Bootstrap JavaScript Bundle (includes Popper.js) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script>
+
     <link rel="icon" href="./Image/fitchecklogo.png">
     <style>
-html {
-    scroll-behavior: smooth;
-}
-
+        html {
+            scroll-behavior: smooth;
+        }
     </style>
 </head>
 
 <body>
-<!-- Navigation Bar -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-    <div class="container">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-            Fit Check
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="#" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="#programs">Programs</a>
+    <nav class="bg-blue-500 text-white">
+        <div class="container mx-auto px-4 flex justify-between items-center h-16">
+            <!-- Logo -->
+            <a href="#" class="flex items-center space-x-2">
+                <img src="./Image/fitchecklogo.png" alt="FitCheck Logo" class="w-8 h-8">
+                <span class="font-bold text-lg">FitCheck</span>
+            </a>
+    
+            <!-- Menu for large screens -->
+            <ul class="hidden md:flex space-x-6 items-center">
+                <li><a href="#programs" class="hover:text-gray-300">Programs</a></li>
+                <li><a href="#about" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#x1" class="hover:text-gray-300">Our Team</a></li>
+                <li><a href="#x2" class="hover:text-gray-300">Customers</a></li>
+                <li>
+                    <a href="contactus.html" class="bg-white text-blue-500 py-2 px-4 rounded hover:bg-gray-200">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#x1">Our Team</a>
+            </ul>
+    
+            <!-- Buttons for Login and Sign Up -->
+            <div class="hidden md:flex space-x-4">
+                <a href="login.html" class="bg-green-500 py-2 px-4 rounded hover:bg-blue-700">Login</a>
+                <a href="signup.html" class="bg-green-500 py-2 px-4 rounded hover:bg-blue-700">Sign Up</a>
+            </div>
+    
+            <!-- Mobile Menu Button -->
+            <button id="menu-toggle" class="md:hidden text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-blue-600">
+            <ul class="flex flex-col space-y-4 p-4">
+                <li><a href="#programs" class="hover:text-gray-300">Programs</a></li>
+                <li><a href="#about" class="hover:text-gray-300">Services</a></li>
+                <li><a href="#x1" class="hover:text-gray-300">Our Team</a></li>
+                <li><a href="#x2" class="hover:text-gray-300">Customers</a></li>
+                <li>
+                    <a href="contactus.html" class="bg-white text-blue-500 py-2 px-4 rounded hover:bg-gray-200">Contact Us</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#x2">Stories</a>
+                <li>
+                    <a href="login.html" class="bg-green-500 py-2 px-4 rounded hover:bg-blue-700">Login</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./login.html">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./signup.html">SignUp</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="./contactus.html">Contact Us</a>
+                <li>
+                    <a href="signup.html" class="bg-green-500 py-2 px-4 rounded hover:bg-blue-600">Sign Up</a>
                 </li>
             </ul>
         </div>
-    </div>
-</nav>
+    </nav>
+    
+    
+    
+    
 
 
     <!-- In the header container -->
@@ -100,73 +126,75 @@ html {
     </section>
 
     <!-- Training Programs Section -->
-<section id="programs" class="py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">TRAINING PROGRAMS</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Program 1 -->
-            <a href="https://youtu.be/dAqQqmaI9vY?si=Dkq4R6zpIcvUIApV" target="_blank" class="no-underline hover:no-underline">
-                <div class="bg-white p-6 shadow-xl">
-                    <img alt="Training Program 1" class="w-full h-48 object-cover mb-4" 
-                        src="./Image/Yoga.jpg"
-                        width="300" />
-                    <h3 class="text-2xl font-bold mb-2">Yoga</h3>
-                    <p class="text-gray-600">Our yoga program offers personalized sessions for all levels, combining poses, breathing, and mindfulness to boost flexibility, reduce stress, and enhance overall well-being.</p>
-                </div>
-            </a>
-            <!-- Program 2 -->
-            <a href="https://youtu.be/S9K96S1Sliw?feature=shared" target="_blank" class="no-underline hover:no-underline">
-                <div class="bg-white p-6 shadow-lg">
-                    <img alt="Training Program 2" class="w-full h-48 object-cover mb-4" 
-                        src="./Image/Gym5.webp"
-                        width="300" />
-                    <h3 class="text-2xl font-bold mb-2">Gym </h3>
-                    <p class="text-gray-600">Our gym service provides personalized workouts for all fitness levels, featuring modern equipment, expert guidance, and tailored plans to improve your overall health.</p>
-                </div>
-            </a>
-            <!-- Program 3 -->
-            <a href="https://youtu.be/duiwo0lKO1g?feature=shared" target="_blank" class="no-underline hover:no-underline">
-                <div class="bg-white p-6 shadow-lg">
-                    <img alt="Training Program 3" class="w-full h-48 object-cover mb-4" height="200"
-                        src="./Image/cons.jpg"
-                        width="300" />
-                    <h3 class="text-2xl font-bold mb-2">Body Consultation </h3>
-                    <p class="text-gray-600">Our body consultation service offers personalized assessments and expert guidance to help you achieve your health, fitness, and wellness goals effectively.</p>
-                </div>
-            </a>
+    <section id="programs" class="py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">TRAINING PROGRAMS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Program 1 -->
+                <a href="https://youtu.be/dAqQqmaI9vY?si=Dkq4R6zpIcvUIApV" target="_blank"
+                    class="no-underline hover:no-underline">
+                    <div class="bg-white p-6 shadow-xl">
+                        <img alt="Training Program 1" class="w-full h-48 object-cover mb-4" src="./Image/Yoga.jpg"
+                            width="300" />
+                        <h3 class="text-2xl font-bold mb-2">Yoga</h3>
+                        <p class="text-gray-600">Our yoga program offers personalized sessions for all levels, combining
+                            poses, breathing, and mindfulness to boost flexibility, reduce stress, and enhance overall
+                            well-being.</p>
+                    </div>
+                </a>
+                <!-- Program 2 -->
+                <a href="https://youtu.be/S9K96S1Sliw?feature=shared" target="_blank"
+                    class="no-underline hover:no-underline">
+                    <div class="bg-white p-6 shadow-lg">
+                        <img alt="Training Program 2" class="w-full h-48 object-cover mb-4" src="./Image/Gym5.webp"
+                            width="300" />
+                        <h3 class="text-2xl font-bold mb-2">Gym </h3>
+                        <p class="text-gray-600">Our gym service provides personalized workouts for all fitness levels,
+                            featuring modern equipment, expert guidance, and tailored plans to improve your overall
+                            health.</p>
+                    </div>
+                </a>
+                <!-- Program 3 -->
+                <a href="https://youtu.be/duiwo0lKO1g?feature=shared" target="_blank"
+                    class="no-underline hover:no-underline">
+                    <div class="bg-white p-6 shadow-lg">
+                        <img alt="Training Program 3" class="w-full h-48 object-cover mb-4" height="200"
+                            src="./Image/cons.jpg" width="300" />
+                        <h3 class="text-2xl font-bold mb-2">Body Consultation </h3>
+                        <p class="text-gray-600">Our body consultation service offers personalized assessments and
+                            expert guidance to help you achieve your health, fitness, and wellness goals effectively.
+                        </p>
+                    </div>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
-    <!-- Define Your Goal Section -->
     <section id="about" class="bg-gray-100 py-12">
         <div class="container mx-auto text-center">
             <h2 class="text-4xl font-bold mb-8">SERVICES WE PROVIDE</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap- 8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                 <div class="bg-white p-6 shadow-lg">
                     <i class="fas fa-dumbbell text-4xl text-blue-900 mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Weight Lifting</h3>
-                    <!-- <p class="text-gray-600">Description of Goal 1</p> -->
                 </div>
                 <div class="bg-white p-6 shadow-lg">
                     <i class="fas fa-heartbeat text-4xl text-blue-900 mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Healthcare</h3>
-                    <!-- <p class="text-gray-600">Description of Goal 2</p> -->
                 </div>
                 <div class="bg-white p-6 shadow-lg">
                     <i class="fas fa-running text-4xl text-blue-900 mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Cardio</h3>
-                    <!-- <p class="text-gray-600">Description of Goal 3</p> -->
                 </div>
                 <div class="bg-white p-6 shadow-lg">
                     <i class="fas fa-apple-alt text-4xl text-blue-900 mb-4"></i>
                     <h3 class="text-2xl font-bold mb-2">Diet</h3>
-                    <!-- <p class="text-gray-600">Description of Goal 4</p> -->
                 </div>
             </div>
         </div>
     </section>
+    
 
     <!-- Classes Timetable Section -->
     <section class="bg-blue-900 text-white py-12">
@@ -224,121 +252,108 @@ html {
     </section>
 
     <!-- Our Team Section -->
-<!-- Our Team Section -->
-<section id="x1" class="py-12">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">OUR TEAM</h2>
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <!-- Team Member 1 -->
-            <div class="bg-white p-6 shadow-lg team-member">
-                <div class="image-container">
-                    <img alt="Team Member 1" src="./Image/paavni.jpg" class="team-image" />
-                    <div class="description">
-                        <p>Paavni is a certified yoga instructor specializing in mindfulness and stress management.</p>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">PAAVNI</h3>
-                <a href="./cv/Paavni Ramdev.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    Download CV
-                </a>
-            </div>
-            <!-- Team Member 2 -->
-            <div class="bg-white p-6 shadow-lg team-member">
-                <div class="image-container">
-                    <img alt="Team Member 2" src="./Image/hrick.jpg" class="team-image" />
-                    <div class="description">
-                        <p>Hrick specializes in strength training and helps clients achieve their peak performance.</p>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">HRICK</h3>
-                <a href="./cv/Hritabrata das.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    Download CV
-                </a>
-            </div>
-            <!-- Team Member 3 -->
-            <div class="bg-white p-6 shadow-lg team-member">
-                <div class="image-container">
-                    <img alt="Team Member 3" src="./Image/abhi.jpg" class="team-image" />
-                    <div class="description">
-                        <p>Abhinav is a nutritionist focused on creating custom diet plans for optimal health.</p>
-                    </div>
-                </div>
-                <h3 class="text-2xl font-bold mb-2">ABHINAV</h3>
-                <a href="./cv/Abhinav Dadwal.pdf" download class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
-                    Download CV
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-
-
-
-<!-- Customer Stories Section -->
-
-<section id="x2" class="bg-blue-900 text-white py-12 customer-stories">
-    <div class="container mx-auto text-center">
-        <h2 class="text-4xl font-bold mb-8">Our Happy Customers</h2>
-    </div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
-            <img alt="Customer Story 1" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story0.jpg" width="300" />
-            <div class="overlay">
-                <h3 class="text-2xl font-bold mb-2">John's Transformation</h3>
-                <p class="text-gray-600">After joining our gym program, John shed 20 pounds in three months and regained his confidence. The personalized plans kept him motivated every step of the way.</p>
-            </div>
-        </div>
-        <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
-            <img alt="Customer Story 2" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story1.jpg" width="300" />
-            <div class="overlay">
-                <h3 class="text-2xl font-bold mb-2">Sarah's Stress-Free Life</h3>
-                <p class="text-gray-600">Sarah's weekly yoga sessions helped her conquer chronic stress and improve her flexibility. She now enjoys a balanced mind and body like never before.</p>
-            </div>
-        </div>
-        <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
-            <img alt="Customer Story 3" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story2.avif" width="300" />
-            <div class="overlay">
-                <h3 class="text-2xl font-bold mb-2">Emma's Wellness Journey</h3>
-                <p class="text-gray-600">A body consultation revealed Emma's unique health needs, leading to a tailored fitness and diet plan. She now feels stronger and healthier than ever.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-    <!-- Your Place for Change Section
-    <section class="py-12">
-      
+    <!-- Our Team Section -->
+    <section id="x1" class="py-12">
         <div class="container mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-8">YOUR PLACE FOR CHANGE</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div class="bg-white p-6 shadow-lg">
-                    <img alt="Gym Image" 
-                        src="./Image/fitchecklogo.png"/>
+            <h2 class="text-4xl font-bold mb-8">OUR TEAM</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-white p-6 shadow-lg team-member">
+                    <div class="image-container">
+                        <img alt="Team Member 1" src="./Image/paavni.jpg" class="team-image" />
+                        <div class="description">
+                            <p>Paavni is a certified yoga instructor specializing in mindfulness and stress management.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">PAAVNI</h3>
+                    <a href="./cv/Paavni Ramdev.pdf" download
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Download CV
+                    </a>
                 </div>
-                <div class="bg-white p-6 shadow-lg flex items-center justify-center">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/AdqrTg_hpEQ?si=A6HJbKKs4F0wr7jj" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <!-- Team Member 2 -->
+                <div class="bg-white p-6 shadow-lg team-member">
+                    <div class="image-container">
+                        <img alt="Team Member 2" src="./Image/hrick.jpg" class="team-image" />
+                        <div class="description">
+                            <p>Hrick specializes in strength training and helps clients achieve their peak performance.
+                            </p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">HRICK</h3>
+                    <a href="./cv/Hritabrata das.pdf" download
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Download CV
+                    </a>
+                </div>
+                <!-- Team Member 3 -->
+                <div class="bg-white p-6 shadow-lg team-member">
+                    <div class="image-container">
+                        <img alt="Team Member 3" src="./Image/abhi.jpg" class="team-image" />
+                        <div class="description">
+                            <p>Abhinav is a nutritionist focused on creating custom diet plans for optimal health.</p>
+                        </div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">ABHINAV</h3>
+                    <a href="./cv/Abhinav Dadwal.pdf" download
+                        class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+                        Download CV
+                    </a>
                 </div>
             </div>
         </div>
-    </section> -->
-
-    <!-- Fire It Up Section -->
+    </section>
 
 
-    
-    <!-- Button linking to contactus.html -->
 
+
+    <!-- Customer Stories Section -->
+
+    <section id="x2" class="bg-blue-900 text-white py-12 customer-stories">
+        <div class="container mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-8">Our Happy Customers</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
+                <img alt="Customer Story 1" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story0.jpg"
+                    width="300" />
+                <div class="overlay">
+                    <h3 class="text-2xl font-bold mb-2">John's Transformation</h3>
+                    <p class="text-gray-600">After joining our gym program, John shed 20 pounds in three months and
+                        regained his confidence. The personalized plans kept him motivated every step of the way.</p>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
+                <img alt="Customer Story 2" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story1.jpg"
+                    width="300" />
+                <div class="overlay">
+                    <h3 class="text-2xl font-bold mb-2">Sarah's Stress-Free Life</h3>
+                    <p class="text-gray-600">Sarah's weekly yoga sessions helped her conquer chronic stress and improve
+                        her flexibility. She now enjoys a balanced mind and body like never before.</p>
+                </div>
+            </div>
+            <div class="bg-white text-black p-6 shadow-lg relative overflow-hidden">
+                <img alt="Customer Story 3" class="w-full h-48 object-cover mb-4" height="200" src="./Image/story2.avif"
+                    width="300" />
+                <div class="overlay">
+                    <h3 class="text-2xl font-bold mb-2">Emma's Wellness Journey</h3>
+                    <p class="text-gray-600">A body consultation revealed Emma's unique health needs, leading to a
+                        tailored fitness and diet plan. She now feels stronger and healthier than ever.</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer Section -->
     <footer style="background-color: rgb(23, 26, 222); height: 60px;">
         <div class="container mx-auto text-center">
-            <p style="text-align: center; color: aliceblue;" >© 2024 Perfect Shape. All rights reserved.</p>
+            <p style="text-align: center; color: aliceblue;">© 2024 Perfect Shape. All rights reserved.</p>
         </div>
     </footer>
-   
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
- <script src="./script/script.js"></script>
+
+
+    <script src="./script/script.js"></script>
 
 </body>
 
