@@ -258,16 +258,39 @@ footer {
 /* Media Queries */
 @media screen and (max-width: 768px) {
     .page {
-        width: 90%;
+        width: 90%; /* Keep this to ensure it doesn't take full width */
+        max-width: 400px; /* Optional: Set a max width for better appearance */
+        align-items: center; /* Center align items */
+        justify-content: center; /* Center align vertically */
+        margin: auto; /* Center the page container */
     }
 
     .loginimg img {
         max-width: 100%;
+        height: auto; /* Maintain aspect ratio */
         margin-bottom: 20px;
     }
 
     .signup-form {
-        width: 100%;
+        width: 100%; /* Ensure the form takes full width */
+        padding: 20px; /* Add padding for better spacing */
+        box-shadow: none; /* Optional: Remove shadow for a cleaner look on mobile */
+        display: flex; /* Use flexbox for alignment */
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align the form elements */
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center align form elements */
+        gap: 15px;
+        width: 100%; /* Ensure form takes full width */
+    }
+
+    form input {
+        width: 100%; /* Make inputs take full width */
+        max-width: 300px; /* Optional: Limit max width for better appearance */
     }
 
     .home-button {
