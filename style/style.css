@@ -1,28 +1,5 @@
-.header-container {
-    position: relative; /* Make the header container relative */
-}
-
-.navbar-overlay {
-    position: absolute; /* Position the navbar absolutely */
-    top: 0; /* Align to the top */
-    left: 0; /* Align to the left */
-    right: 0; /* Stretch to the right */
-    z-index: 10; /* Ensure it overlays other content */
-    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
-}
-
 .navbar {
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
-}
-
-.nav-link {
-    font-weight: bold; /* Make the font bold */
-    color: #007bff; /* Change link color */
-    transition: color 0.3s; /* Smooth color transition */
-}
-
-.nav-link:hover {
-    color: #0056b3; /* Darker color on hover */
+    display: none; /* Incorrect rule */
 }
 
 .header-container {
@@ -90,7 +67,6 @@
     background-color: #87CEEB;
     transform: scale(1.05);
 }
-
 .navigation {
     position: absolute;
     top: 50%;
@@ -168,7 +144,24 @@ a.no-underline:hover h3 {
     display: flex;
     align-items: center;
 }
+/* Hover Effect for Service Cards */
+#about .grid div {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
+#about .grid div:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #f0f8ff; /* Optional: Light background change */
+}
+
+#about .grid div:hover i {
+    color: #ff6347; /* Optional: Icon color change on hover */
+}
+
+#about .grid div:hover h3 {
+    color: #007bff; /* Optional: Title color change on hover */
+}
 
 /* Our Team Section Styles */
 .team-member {
