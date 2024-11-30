@@ -38,7 +38,7 @@ let currentGender = null;
                     quote = "Small changes can lead to big transformations.";
                     details = "Underweight. Consult a healthcare professional.";
                     linkText = "Underweight Tips";
-                    linkHref = "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/in-depth/underweight/art-20046555";
+                    linkHref = "https://www.mayoclinic.org/healthy-lifestyle/nutrition-and-healthy-eating/expert-answers/underweight/faq-20058429";
                     pointerPosition = (bmi / 18.5) * 18.5;
                 } else if (bmi >= 18.5 && bmi <= 24.9) {
                     status = "Normal Weight";
@@ -46,7 +46,7 @@ let currentGender = null;
                     quote = "Maintaining a balanced lifestyle is key!";
                     details = "Healthy BMI range. Keep it up!";
                     linkText = "Maintaining Weight";
-                    linkHref = "https://www.health.harvard.edu/staying-healthy/maintaining-a-healthy-weight";
+                    linkHref = "https://www.nia.nih.gov/health/healthy-eating-nutrition-and-diet/maintaining-healthy-weight#:~:text=Being%20active%20and%20choosing%20healthy,of%20physical%20activity%20per%20week.";
                     pointerPosition = 18.5 + ((bmi - 18.5) / (24.9 - 18.5)) * 6.5;
                 } else if (bmi >= 25 && bmi <= 29.9) {
                     status = "Overweight";
@@ -54,7 +54,7 @@ let currentGender = null;
                     quote = "Every small step counts. You're stronger than you think!";
                     details = "Overweight. Consider professional guidance.";
                     linkText = "Overweight Advice";
-                    linkHref = "https://www.mayoclinic.org/healthy-lifestyle/weight-loss/in-depth/overweight/art-20045267";
+                    linkHref = "https://www.mayoclinic.org/diseases-conditions/obesity/diagnosis-treatment/drc-20375749";
                     pointerPosition = 25 + ((bmi - 25) / (29.9 - 25)) * 5;
                 } else {
                     status = "Obese";
@@ -62,7 +62,7 @@ let currentGender = null;
                     quote = "Your journey begins with a single step!";
                     details = "Obesity. Comprehensive health plan recommended.";
                     linkText = "Obesity Resources";
-                    linkHref = "https://www.cdc.gov/obesity/basics/index.html";
+                    linkHref = "https://www.cdc.gov/obesity/php/about/obesity-strategies-what-can-be-done.html";
                     pointerPosition = 30 + Math.min(((bmi - 30) / 10), 1) * 20;
                 }
 
@@ -72,7 +72,7 @@ let currentGender = null;
                 motivationQuote.textContent = quote;
 
                 // Position BMI meter pointer
-                bmiMeterPointer.style.left = `${Math.min(Math.max(pointerPosition, 0), 50)}%`;
+                bmiMeterPointer.style.left = ${Math.min(Math.max(pointerPosition, 0), 50)}%;
 
                 // Show additional sections
                 bmiDetails.style.display = 'block';
