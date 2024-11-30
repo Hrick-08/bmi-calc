@@ -46,7 +46,7 @@ let currentGender = null;
                     quote = "Maintaining a balanced lifestyle is key!";
                     details = "Healthy BMI range. Keep it up!";
                     linkText = "Maintaining Weight";
-                    linkHref = "https://www.nia.nih.gov/health/healthy-eating-nutrition-and-diet/maintaining-healthy-weight#:~:text=Being%20active%20and%20choosing%20healthy,of%20physical%20activity%20per%20week.";
+                    linkHref = "https://www.nia.nih.gov/health/healthy-eating-nutrition-and-diet/maintaining-healthy-weight#:~:text=Being%20active%20and%20choosing%20healthy,of%20physical%20activity%20per%20week";
                     pointerPosition = 18.5 + ((bmi - 18.5) / (24.9 - 18.5)) * 6.5;
                 } else if (bmi >= 25 && bmi <= 29.9) {
                     status = "Overweight";
@@ -72,7 +72,7 @@ let currentGender = null;
                 motivationQuote.textContent = quote;
 
                 // Position BMI meter pointer
-                bmiMeterPointer.style.left = ${Math.min(Math.max(pointerPosition, 0), 50)}%;
+                bmiMeterPointer.style.left = `${Math.min(Math.max(pointerPosition, 0), 50)}%`;
 
                 // Show additional sections
                 bmiDetails.style.display = 'block';
