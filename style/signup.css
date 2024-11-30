@@ -209,6 +209,7 @@ form input:focus {
 .home-button-container {
     margin: 20px 0;
     text-align: center;
+    animation: fadeIn 2s ease-in-out;
 }
 
 .home-button {
@@ -220,11 +221,13 @@ form input:focus {
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    animation: bounce 2s infinite;
 }
 
 .home-button:hover {
     background-color: #0056b3;
+    transform: scale(1.1);
 }
 
 /* Footer */
